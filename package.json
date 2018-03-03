@@ -1,0 +1,36 @@
+{
+  "name": "react-typescript-101",
+  "version": "0.0.1",
+  "description": "React TypeScript example",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/younis-momenton/react-typescript-101.git"
+  },
+  "keywords": [
+    "React",
+    "TypeScript",
+    "simple"
+  ],
+  "author": "Younis Al-Rawi",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/younis-momenton/react-typescript-101/issues"
+  },
+  "homepage": "https://github.com/younis-momenton/react-typescript-101#readme",
+  "devDependencies": {
+    "@types/react": "^16.0.40",
+    "@types/react-dom": "^16.0.4",
+    "awesome-typescript-loader": "^3.5.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "source-map-loader": "^0.2.3",
+    "typescript": "^2.7.2",
+    "webpack": "^4.0.1",
+    "webpack-cli": "^2.0.10"
+  }
+}
