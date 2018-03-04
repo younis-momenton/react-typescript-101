@@ -1,15 +1,14 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import * as TestUtils from 'react-dom/test-utils';
+import { shallow } from "enzyme";
+import * as ReactTestRenderer from 'react-test-renderer';
 
-const HelloWorld = require("../HelloWorld");
+import HelloWorld from "../HelloWorld";
 
 it("renders with crashing", () => {
-    const helloWorld = TestUtils.renderIntoDocument(
-        <HelloWorld name="Younis" />
-    );
+    const wrapper = shallow(<HelloWorld name="test"/>);
+});
 
-    const helloWorldNode = ReactDOM.findDOMNode(helloWorld);
-
-    expect(helloWorldNode.textContent).toEqual("Hello World from Younis");
-})
+it("component rendering compared to the snapshot", () => {
+    const wrapper = ReactTestRenderer.create(<HelloWorld name="test"/>);
+    expect(wrapper).toMatchSnapshot();
+});

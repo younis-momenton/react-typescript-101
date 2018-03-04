@@ -4,7 +4,7 @@ export interface HelloWorldProps {
     name: string;
 }
 
-export class HelloWorld extends React.Component<HelloWorldProps,{}> {
+export default class HelloWorld extends React.Component<HelloWorldProps,{}> {
     render() {
         return <div><h1>Hello World from {this.props.name}</h1></div>;
     }

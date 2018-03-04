@@ -8,6 +8,10 @@ Technologies used:
 - TypeScript 2.7
 - Webpack 4
 
+For Testing:
+- Jest
+- Enzyme
+
 
 ## Run the project
 
@@ -20,3 +24,7 @@ To install the project
 To Build the bundle.js
 
 Open index.html in your browser.
+
+Test the project
+
+`npm test`

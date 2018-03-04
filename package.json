@@ -4,7 +4,7 @@
   "description": "React TypeScript example",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "webpack"
   },
   "repository": {
@@ -23,14 +23,38 @@
   },
   "homepage": "https://github.com/younis-momenton/react-typescript-101#readme",
   "devDependencies": {
+    "@types/enzyme": "^3.1.9",
+    "@types/jest": "^22.1.4",
     "@types/react": "^16.0.40",
     "@types/react-dom": "^16.0.4",
+    "@types/react-test-renderer": "^16.0.1",
     "awesome-typescript-loader": "^3.5.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "^22.4.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "react-test-renderer": "^16.2.0",
     "source-map-loader": "^0.2.3",
     "typescript": "^2.7.2",
     "webpack": "^4.0.1",
     "webpack-cli": "^2.0.10"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/test-setup.js",
+      "<rootDir>/config/test-shim.js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/config/preprocessor.js"
+    },
+    "testMatch": [
+      "**/**/__tests__/**/*.(ts|tsx|js)"
+    ]
   }
 }
